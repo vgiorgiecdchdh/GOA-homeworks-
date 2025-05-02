@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>გიორგი მუშკუდიანი</title>
+</head>
+<body>
+    <h2>შეიყვანე სიტყვა:</h2>
+    <input type="text" id="wordInput">
+    <button onclick="checkName()">შემოწმება</button>
+    <p id="result2"></p>
+
+    <script>
+        const myName = "გიორგი";
+        const mySurname = "მუშკუდიანი";
+
+        function checkName() {
+            const input = document.getElementById("wordInput").value;
+            let result = "None";
+
+            if (input === myName) {
+                result = myName;
+            } else if (input === mySurname) {
+                result = mySurname;
+            }
+
+            document.getElementById("result2").innerText = result;
+        }
+    </script>
+</body>
+</html>

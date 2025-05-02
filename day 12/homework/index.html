@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ტელეფონის ნომრის თამაში</title>
+</head>
+<body>
+    <h1>შეიყვანე ნომერი:</h1>
+    <input type="text" id="userInput" placeholder="შეიყვანე ნომერი">
+    <button onclick="checkNumber()">შემოწმება</button>
+
+    <p id="result"></p>
+
+    <script>
+        const myPhoneNumber = "599123456"; // აქ ჩაწერე შენი ნომერი
+
+        function checkNumber() {
+            const userNumber = document.getElementById("userInput").value;
+
+            if (userNumber === myPhoneNumber) {
+                document.getElementById("result").innerText = "არ დამირეკო";
+            } else {
+                document.getElementById("result").innerText = "better luck next time";
+            }
+        }
+    </script>
+</body>
+</html>

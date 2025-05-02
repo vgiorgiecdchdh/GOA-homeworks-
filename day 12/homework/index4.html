@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>რიცხვის შემოწმება</title>
+</head>
+<body>
+    <h2>40:</h2>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">გამოთვლა</button>
+    <p id="result5"></p>
+
+    <script>
+        function checkNumber() {
+            const num = parseFloat(document.getElementById("numberInput").value);
+            let result = 0;
+
+            if (num > 40) {
+                result = num * 2;
+            } else {
+                result = num / 2;
+            }
+
+            document.getElementById("result5").innerText = "შედეგი: " + result;
+        }
+    </script>
+</body>
+</html>

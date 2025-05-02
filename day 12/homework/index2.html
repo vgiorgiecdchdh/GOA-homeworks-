@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ასაკის შემოწმება</title>
+</head>
+<body>
+    <h2>შეიყვანე ასაკი:</h2>
+    <input type="number" id="ageInput">
+    <button onclick="checkAge()">შემოწმება</button>
+    <p id="result3"></p>
+
+    <script>
+        function checkAge() {
+            const age = parseInt(document.getElementById("ageInput").value);
+            let message = "";
+
+            if (age > 80) {
+                message = "მოხუცი ხარ";
+            } else if (age > 18) {
+                message = "სრულწლოვანი ხარ";
+            } else if (age < 18) {
+                message = "თინეიჯერი ხარ";
+            } else {
+                message = "ადამიანი არ ხარ.";
+            }
+
+            document.getElementById("result3").innerText = message;
+        }
+    </script>
+</body>
+</html>

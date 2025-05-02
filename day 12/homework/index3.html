@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>პაროლის შემოწმება</title>
+</head>
+<body>
+    <h2>შეიყვანე პაროლი:</h2>
+    <input type="password" id="passwordInput">
+    <button onclick="checkPassword()">შემოწმება</button>
+    <p id="result4"></p>
+
+    <script>
+        const realPassword = "sololearn123"; // შეცვალე ამით შენი რეალური პაროლი
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById("passwordInput").value;
+            const message = (enteredPassword === realPassword) ? "dont log in" : "better luck next time";
+            document.getElementById("result4").innerText = message;
+        }
+    </script>
+</body>
+</html>
