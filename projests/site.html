@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ვებსაიტი</title>
+  <style>
+    body { font-family: sans-serif; }
+    .menu a {
+      margin-right: 10px;
+      text-decoration: none;
+      color:blue;
+    }
+    .section { display: none; }
+    .active { display: block; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>მოგესალმებით!</h1>
+
+  <div class="menu">
+    <a href="#" onclick="show('home')">მთავარი</a>
+    <a href="#" onclick="show('reg')">რეგისტრაცია</a>
+    <a href="#" onclick="show('vid')">ვიდეო</a>
+  </div>
+
+  <div id="home" class="section active">
+    <p>ეს არის მთავარი გვერდი.</p>
+  </div>
+
+  <div id="reg" class="section">
+    <h2>რეგისტრაცია</h2>
+    <form onsubmit="event.preventDefault(); alert('რეგისტრაცია წარმატებით დასრულდა!');">
+      <input type="text" placeholder="სახელი" required><br><br>
+      <input type="email" placeholder="ელ. ფოსტა" required><br><br>
+      <input type="password" placeholder="პაროლი" required><br><br>
+      <button type="submit">გაგზავნა</button>
+    </form>
+  </div>
+
+  <div id="vid" class="section">
+    <h2>ვიდეო</h2>
+    <video width="300" controls>
+      <source src="projests/Work from anywhere kind of day 👀 (details in description).mp4" type="video/mp4">
+      ვიდეო არ ჩაიტვირთა.
+    </video>
+  </div>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
